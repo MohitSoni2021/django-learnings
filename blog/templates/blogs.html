@@ -12,4 +12,35 @@
 <!-- We can also use the following syntax to access the data -->
 <h2>Welcome to the Blogs Page {{variable}}</h2>
 
+<!-- invoking the skills -->
+{{skills}}
+<br />
+<hr />
+<!-- getting the single skill -->
+{{skills.0}}
+
+<br />
+<hr />
+
+{{blog.title}}
+<br />
+{{blog.author}}
+<br />
+<!-- the safe keyword is used to define the browser safe values like if we have some values containing the html tags they to get the execution of those tags we need to use the 'safe' keyword -->
+{{blog.content | safe}}
+
+<!-- iterations for the array in templete -->
+{% for item in skills %}
+<!--  -->
+<p>{{item}}</p>
+<!--  -->
+{% endfor %}
+
+<!-- default values in templates, if we have value with None we can defined a default value for it -->
+
+<h3>Comment section</h3>
+
+{% if comments %} {{comments}} {% else %} No comments till now. {% endif %}
+
+<!-- ending the blog... -->
 {% endblock %}

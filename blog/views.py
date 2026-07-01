@@ -24,7 +24,14 @@ def blogTemplete(req):
     # for sending the data to the templete:
     context = {
         'variable': 'variable',
-        'name': 'Mohit Soni'
+        'name': 'Mohit Soni',
+        'skills' : ['reactjs', 'nextjs', 'tailwind', 'django', 'nodejs', 'expressjs'],
+        'blog' : {
+            'title' : 'Title of the blog',
+            'author' : 'Mohit Soni', 
+            'content' : '<b>This is the content of the blog. by mohit soni.</b>'
+        },
+        "comments" : None
     }
     return render(req, 'blogs.html', context)
 
