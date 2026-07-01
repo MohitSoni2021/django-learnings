@@ -26,6 +26,6 @@ def blogTemplete(req):
         'variable': 'variable',
         'name': 'Mohit Soni'
     }
-    return render(req, 'blogs.html')
+    return render(req, 'blogs.html', context)
 
 
