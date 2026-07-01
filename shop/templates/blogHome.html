@@ -1,0 +1,13 @@
+<!-- this ensure to use the base.html for this blogs.html file and we don't have to write the templete again and again. It just like the parent and child -->
+{% extends "base.html" %}
+
+<!-- extending the title -->
+{% block title %} SHOPS | Learn with Mohit Soni {% endblock %}
+
+<!-- extending the content -->
+{% block content %}
+
+<h1>Welcome to the Shops</h1>
+<a href="/blog">Back to Blog...</a>
+
+{% endblock %}

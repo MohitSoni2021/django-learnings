@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def shopHome(req):
@@ -15,3 +16,6 @@ def shopInformations(req, **kwargs):
     print("Information from shopInformation Function:")
     print(kwargs)
     return HttpResponse(f"The shop id : {kwargs['shop_id']} and shop name : {kwargs['shop_name']} is now at your screen...")
+
+def shopHomeTemplete(req):
+    return render(req, 'blogHome.html')

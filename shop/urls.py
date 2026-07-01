@@ -2,7 +2,7 @@ from django.urls import path, re_path
 from shop import views
 
 urlpatterns = [
-    path('', views.shopHome, name="shophome"),
+    path('', views.shopHomeTemplete, name="shophome"),
     path('search/<str:shop_id>', views.searchShop, name="searchShop"),
 
     # these re_path are used to define the parameter info the we are getting 

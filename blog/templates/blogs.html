@@ -1,14 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogs | Learn with Mohit</title>
-  </head>
-  <body>
-    <!-- we need to use the double curly brackets for dynamic access of the data from the views.py to the templates.html  -->
-    <h1>Welcome to the Blogs Page {{name}}</h1>
-    <!-- We can also use the following syntax to access the data -->
-    <h2>Welcome to the Blogs Page {{variable}}</h2>
-  </body>
-</html>
+<!-- this ensure to use the base.html for this blogs.html file and we don't have to write the templete again and again. It just like the parent and child -->
+{% extends "base.html" %}
+
+<!-- extending the title -->
+{% block title %} BLOGS | Learn with Mohit Soni {% endblock %}
+
+<!-- extending the content -->
+{% block content %}
+
+<!-- we need to use the double curly brackets for dynamic access of the data from the views.py to the templates.html  -->
+<h1>Welcome to the Blogs Page {{name}}</h1>
+<!-- We can also use the following syntax to access the data -->
+<h2>Welcome to the Blogs Page {{variable}}</h2>
+
+{% endblock %}
