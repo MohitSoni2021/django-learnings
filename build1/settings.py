@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+# used to handle the path with the system...
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -56,7 +59,8 @@ ROOT_URLCONF = "build1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        # registering the templete directory...
+        "DIRS": [os.path.join(BASE_DIR, "build1/templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

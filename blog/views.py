@@ -1,4 +1,8 @@
+# It is used to handle the http requests...
 from django.http import HttpResponse
+
+# It is used to handle the rendering of the templetes...
+from django.shortcuts import render
 
 # Create your views here.
 # by defalt view have one parameter whih is the request...
@@ -15,3 +19,13 @@ def blog_post_2(request):
 # defining the dynamic urls...
 def blog_post(req, post_id):
     return HttpResponse(f"This is post {post_id}")
+
+def blogTemplete(req):
+    # for sending the data to the templete:
+    context = {
+        'variable': 'variable',
+        'name': 'Mohit Soni'
+    }
+    return render(req, 'blogs.html')
+
+
